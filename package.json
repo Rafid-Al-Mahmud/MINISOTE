@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Rafid-Al-Mahmud/MINISOTE/issues"
   },
-  "homepage": "https://github.com/Rafid-Al-Mahmud/MINISOTE#readme"
+  "homepage": "https://github.com/Rafid-Al-Mahmud/MINISOTE#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
 }
