@@ -4,7 +4,8 @@
   "description": "A service of free websites builder and desktop softwares.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "url": "git+https://github.com/Rafid-Al-Mahmud/MINISOTE.git"
