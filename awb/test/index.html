@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <div id="userArea">
+        <h1>HELLO WORLD</h1>
+        <input type="text">
+    </div>
+    <div id="currentElement"></div>
+
+    <div id="stylebot" align="center">
+
+        <h1 style="
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        ">STYLES</h1>
+        
+        <div>
+
+        <div class="align-content">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.align-content button')">&#xf0a9;</i>
+            </span>
+            <h4>align-content</h4>
+            <button class="btn" onclick="editElement.style.alignContent='stretch';">stretch</button>
+            <button class="btn" onclick="editElement.style.alignContent='center';">center</button>
+            <button class="btn" onclick="editElement.style.alignContent='flexStart';">flex-start</button>
+            <button class="btn" onclick="editElement.style.alignContent='flexEnd';">flex-end</button>
+            <button class="btn" onclick="editElement.style.alignContent='spaceBetween';">space-between</button>
+            <button class="btn" onclick="editElement.style.alignContent='spaceAround';">space-around</button>
+            <button class="btn" onclick="editElement.style.alignContent='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.alignContent='inherit';">inherit</button>
+        </div>
+
+        <div class="align-items">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.align-items button')">&#xf0a9;</i>
+            </span>
+            <h4>align-items</h4>
+            <button class="btn" onclick="editElement.style.alignItems='stretch';">stretch</button>
+            <button class="btn" onclick="editElement.style.alignItems='center';">center</button>
+            <button class="btn" onclick="editElement.style.alignItems='flexStart';">flex-start</button>
+            <button class="btn" onclick="editElement.style.alignItems='flexEnd';">flex-end</button>
+            <button class="btn" onclick="editElement.style.alignItems='baseline';">baseline</button>
+            <button class="btn" onclick="editElement.style.alignItems='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.alignItems='inherit';">inherit</button>
+        </div>
+
+        <div class="align-self">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.align-self button')">&#xf0a9;</i>
+            </span>
+            <h4>align-self</h4>
+            <button class="btn" onclick="editElement.style.alignSelf='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.alignSelf='stretch';">stretch</button>
+            <button class="btn" onclick="editElement.style.alignSelf='center';">center</button>
+            <button class="btn" onclick="editElement.style.alignSelf='flexStart';">flex-start</button>
+            <button class="btn" onclick="editElement.style.alignSelf='flexEnd';">flex-end</button>
+            <button class="btn" onclick="editElement.style.alignSelf='baseline';">baseline</button>
+            <button class="btn" onclick="editElement.style.alignSelf='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.alignSelf='inherit';">inherit</button>
+        </div>
+
+        <div class="all">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.all button')">&#xf0a9;</i>
+            </span>
+            <h4>all</h4>
+            <button class="btn" onclick="editElement.style.all='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.all='inherit';">inherit</button>
+            <button class="btn" onclick="editElement.style.all='unset';">unset</button>
+        </div>
+
+        <div class="animation">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.animation button')">&#xf0a9;</i>
+            </span>
+            <h4>animation</h4>
+            <input type="color" oninput="color(this.value)">
+        </div>
+
+        <div class="backface-visibility">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.backface-visibility button')">&#xf0a9;</i>
+            </span>
+            <h4>backface-visibility</h4>
+            <button class="btn">visible</button>
+            <button class="btn">hidden</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="background">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.background button')">&#xf0a9;</i>
+            </span>
+            <h4>background</h4>
+            <input type="color" oninput="backgroundColor(this.value)">
+        </div>
+
+        <div class="border">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.align-content button')">&#xf0a9;</i>
+            </span>
+            <h4>border</h4>
+            <input type="color" oninput="color(this.value)">
+        </div>
+
+        <div class="bottom">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.bottom button')">&#xf0a9;</i>
+            </span>
+            <h4>bottom</h4>
+            <button class="btn">auto</button>
+            <button class="btn">length</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+            <button class="btn">%</button>
+        </div>
+
+        <div class="box-decoration-break">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.box-decoration-break button')">&#xf0a9;</i>
+            </span>
+            <h4>box-decoration-break</h4>
+            <button class="btn">slice</button>
+            <button class="btn">clone</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+            <button class="btn">unset</button>
+        </div>
+
+        <div class="box-shadow">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.box-shadow button')">&#xf0a9;</i>
+            </span>
+            <h4>box-shadow</h4>
+            <button class="btn">none</button><!--
+                <label class="switch">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </label><br><br>-->
+            <button class="btn">inset</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="box-sizing">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.box-sizing button')">&#xf0a9;</i>
+            </span>
+            <h4>box-sizing</h4>
+            <button class="btn">cintent-box</button>
+            <button class="btn">border-box</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="caption-side">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.caption-side button')">&#xf0a9;</i>
+            </span>
+            <h4>caption-side</h4>
+            <button class="btn">top</button>
+            <button class="btn">bottom</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="caret-color">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.caret-color button')">&#xf0a9;</i>
+            </span>
+            <h4>caret-color</h4>
+            <button class="btn">color</button>
+            <button class="btn">auto</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="clear">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.clear button')">&#xf0a9;</i>
+            </span>
+            <h4>clear</h4>
+            <button class="btn">none</button>
+            <button class="btn">left</button>
+            <button class="btn">right</button>
+            <button class="btn">both</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="clip">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.clip button')">&#xf0a9;</i>
+            </span>
+            <h4>clip</h4>
+            <input type="color" oninput="color(this.value)">
+        </div>
+
+        <div class="clip-path">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.clip-path button')">&#xf0a9;</i>
+            </span>
+            <h4>clip-path</h4>
+            <input type="color" oninput="color(this.value)">
+        </div>
+
+        <div class="color">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.color input')">&#xf0a9;</i>
+            </span>
+            <h4>Color</h4>
+            <input type="color" oninput="color(this.value)">
+        </div>
+
+        <div class="column-count">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.column-count button')">&#xf0a9;</i>
+            </span>
+            <h4>column-count</h4>
+            <button class="btn">lenght</button>
+            <button class="btn">auto</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="column-fill">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.column-fill button')">&#xf0a9;</i>
+            </span>
+            <h4>column-fill</h4>
+            <button class="btn">balance</button>
+            <button class="btn">auto</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="column-gap">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.column-gap button')">&#xf0a9;</i>
+            </span>
+            <h4>column-gap</h4>
+            <button class="btn">lenght</button>
+            <button class="btn">normal</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="column-rule">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.column-rule button')">&#xf0a9;</i>
+            </span>
+            <h4>column-rule</h4>
+            <button class="btn">column-rule-width</button>
+            <button class="btn">column-rule-style</button>
+            <button class="btn">column-rule-color</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="column-span">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.column-span button')">&#xf0a9;</i>
+            </span>
+            <h4>column-span</h4>
+            <button class="btn">none</button>
+            <button class="btn">all</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="column-width">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.column-width button')">&#xf0a9;</i>
+            </span>
+            <h4>column-width</h4>
+            <button class="btn">auto</button>
+            <button class="btn">lenght</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="columns">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.columns button')">&#xf0a9;</i>
+            </span>
+            <h4>columns</h4>
+            <button class="btn">auto</button>
+            <button class="btn">column-width</button>
+            <button class="btn">column-count</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="content">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.content button')">&#xf0a9;</i>
+            </span>
+            <h4>content</h4>
+            <button class="btn">normal</button>
+            <button class="btn">none</button>
+            <button class="btn">counter</button>
+            <button class="btn">attr</button>
+            <button class="btn">string</button>
+            <button class="btn">open-quote</button>
+            <button class="btn">close-quote</button>
+            <button class="btn">no-open-quote</button>
+            <button class="btn">no-close-quote</button>
+            <button class="btn">url</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="counter-increment">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.counter-increment button')">&#xf0a9;</i>
+            </span>
+            <h4>counter-increment</h4>
+            <button class="btn">none</button>
+            <button class="btn">id</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="counter-reset">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.counter-reset button')">&#xf0a9;</i>
+            </span>
+            <h4>counter-reset</h4>
+            <button class="btn">none</button>
+            <button class="btn">name number</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="cursor">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.cursor button')">&#xf0a9;</i>
+            </span>
+            <h4>cursor</h4>
+            <button class="btn" onclick="cursor(this)">alias</button>
+            <button class="btn" onclick="cursor(this)">all-scroll</button>
+            <button class="btn" onclick="cursor(this)">auto</button>
+            <button class="btn" onclick="cursor(this)">cell</button>
+            <button class="btn" onclick="cursor(this)">context-menu</button>
+            <button class="btn" onclick="cursor(this)">col-resize</button>
+            <button class="btn" onclick="cursor(this)">copy</button>
+            <button class="btn" onclick="cursor(this)">crosshair</button>
+            <button class="btn" onclick="cursor(this)">default</button>
+            <button class="btn" onclick="cursor(this)">e-resize</button>
+            <button class="btn" onclick="cursor(this)">ew-resize</button>
+            <button class="btn" onclick="cursor(this)">grab</button>
+            <button class="btn" onclick="cursor(this)">grabbing</button>
+            <button class="btn" onclick="cursor(this)">help</button>
+            <button class="btn" onclick="cursor(this)">move</button>
+            <button class="btn" onclick="cursor(this)">n-resize</button>
+            <button class="btn" onclick="cursor(this)">ne-resize</button>
+            <button class="btn" onclick="cursor(this)">nesw-resize</button>
+            <button class="btn" onclick="cursor(this)">ns-resize</button>
+            <button class="btn" onclick="cursor(this)">nw-resize</button>
+            <button class="btn" onclick="cursor(this)">nwse-resize</button>
+            <button class="btn" onclick="cursor(this)">no-drop</button>
+            <button class="btn" onclick="cursor(this)">none</button>
+            <button class="btn" onclick="cursor(this)">not-allowed</button>
+            <button class="btn" onclick="cursor(this)">pointer</button>
+            <button class="btn" onclick="cursor(this)">progress</button>
+            <button class="btn" onclick="cursor(this)">row-resize</button>
+            <button class="btn" onclick="cursor(this)">s-resize</button>
+            <button class="btn" onclick="cursor(this)">se-resize</button>
+            <button class="btn" onclick="cursor(this)">sw-resize</button>
+            <button class="btn" onclick="cursor(this)">text</button>
+            <button class="btn" onclick="cursor(this)">url('cursor.cur')</button>
+            <button class="btn" onclick="cursor(this)">w-resize</button>
+            <button class="btn" onclick="cursor(this)">wait</button>
+            <button class="btn" onclick="cursor(this)">zoom-in</button>
+            <button class="btn" onclick="cursor(this)">zoom-out</button>
+        </div>
+
+        <div class="direction">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.direction button')">&#xf0a9;</i>
+            </span>
+            <h4>direction</h4>
+            <button class="btn">ltr</button>
+            <button class="btn">rtl</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="display">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.display button')">&#xf0a9;</i>
+            </span>
+            <h4>display</h4>
+            <button class="btn" onclick="editElement.style.display='inline';">inline</button>
+            <button class="btn" onclick="editElement.style.display='block';">block</button>
+            <button class="btn" onclick="editElement.style.display='contents';">contents</button>
+            <button class="btn" onclick="editElement.style.display='flex';">flex</button>
+            <button class="btn" onclick="editElement.style.display='grid';">grid</button>
+            <button class="btn" onclick="editElement.style.display='inlineBlock';">inline-block</button>
+            <button class="btn" onclick="editElement.style.display='inlineFlex';">inline-flex</button>
+            <button class="btn" onclick="editElement.style.display='inlineGrid';">inline-grid</button>
+            <button class="btn" onclick="editElement.style.display='inlineTable';">inline-table</button>
+            <button class="btn" onclick="editElement.style.display='listItem';">list-item</button>
+            <button class="btn" onclick="editElement.style.display='runIn';">run-in</button>
+            <button class="btn" onclick="editElement.style.display='table';">table</button>
+            <button class="btn" onclick="editElement.style.display='tableCaption';">table-caption</button>
+            <button class="btn" onclick="editElement.style.display='tableColumn-group';">table-column-group</button>
+            <button class="btn" onclick="editElement.style.display='tableHeader-group';">table-header-group</button>
+            <button class="btn" onclick="editElement.style.display='tableFooter-group';">table-footer-group</button>
+            <button class="btn" onclick="editElement.style.display='tableRow-group';">table-row-group</button>
+            <button class="btn" onclick="editElement.style.display='tableCell';">table-cell</button>
+            <button class="btn" onclick="editElement.style.display='tableColumn';">table-column</button>
+            <button class="btn" onclick="editElement.style.display='tableRow';">table-row</button>
+            <button class="btn" onclick="editElement.style.display='none';">none</button>
+            <button class="btn" onclick="editElement.style.display='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.display='inherit';">inherit</button>
+        </div>
+
+        <div class="empty-cells">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.empty-cells button')">&#xf0a9;</i>
+            </span>
+            <h4>empty-cells</h4>
+            <button class="btn">show</button>
+            <button class="btn">hide</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="filter">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.filter button')">&#xf0a9;</i>
+            </span>
+            <h4>filter</h4>
+            <button class="btn" onclick="editElement.style.filter='none';">none</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">blur(px)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">brightness(%)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">contrast(%)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">drop-shadow(h-shadow v-shadow blur spread color)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">grayscale(%)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">hue-rotate(deg)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">invert(%)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">opacity(%)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">saturate(%)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">sepia(%)</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">url()</button>
+            <button class="btn" onclick="editElement.style.filter='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.filter='inherit';">inherit</button>
+        </div>
+
+        <div class="flex">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.flex button')">&#xf0a9;</i>
+            </span>
+            <h4>flex</h4>
+            <button class="btn">flex-grow flex-shrink flex-basis</button>
+            <button class="btn">auto</button>
+            <button class="btn">initial</button>
+            <button class="btn">none</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="float">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.float button')">&#xf0a9;</i>
+            </span>
+            <h4>float</h4>
+            <button class="btn">none</button>
+            <button class="btn">left</button>
+            <button class="btn">right</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="font">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.font button')">&#xf0a9;</i>
+            </span>
+            <h4>font</h4>
+            <button class="btn">font-style font-variant font-weight font-size/line-height font-family</button>
+            <button class="btn">caption</button>
+            <button class="btn">icon</button>
+            <button class="btn">menu</button>
+            <button class="btn">message-box</button>
+            <button class="btn">small-caption</button>
+            <button class="btn">status-bar</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="gap">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.gap button')">&#xf0a9;</i>
+            </span>
+            <h4>gap</h4>
+            <button class="btn">row-gap column-gap</button>
+        </div>
+
+        <div class="grid">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.grid button')">&#xf0a9;</i>
+            </span>
+            <h4>grid</h4>
+            <input type="color" oninput="color(this.value)">
+        </div>
+
+        <div class="hanging-punctuation">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.hanging-punctuation button')">&#xf0a9;</i>
+            </span>
+            <h4>hanging-punctuation</h4>
+            <input type="color" oninput="color(this.value)">
+        </div>
+
+        <div class="height">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.height button')">&#xf0a9;</i>
+            </span>
+            <h4>height</h4>
+            <button class="btn" onclick="editElement.style.height='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.height='X';">length</button>
+            <button class="btn" onclick="editElement.style.height='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.height='inherit';">inherit</button>
+        </div>
+
+        <div class="hyphens">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.hyphens button')">&#xf0a9;</i>
+            </span>
+            <h4>hyphens</h4>
+            <button class="btn" onclick="editElement.style.height='inherit';">none</button>
+            <button class="btn" onclick="editElement.style.height='inherit';">manual</button>
+            <button class="btn" onclick="editElement.style.height='inherit';">auto</button>
+            <button class="btn" onclick="editElement.style.height='inherit';">initial</button>
+            <button class="btn" onclick="editElement.style.height='inherit';">inherit</button>
+        </div>
+
+        <div class="isolation">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.isolation button')">&#xf0a9;</i>
+            </span>
+            <h4>isolation</h4>
+            <button class="btn" onclick="editElement.style.height='inherit';">auto</button>
+            <button class="btn" onclick="editElement.style.height='inherit';">isolate</button>
+            <button class="btn" onclick="editElement.style.height='inherit';">initial</button>
+            <button class="btn" onclick="editElement.style.height='inherit';">inherit</button>
+        </div>
+
+        <div class="justify-content">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.justify-content button')">&#xf0a9;</i>
+            </span>
+            <h4>justify-content</h4>
+            <button class="btn" onclick="editElement.style.justifyContent='flexStart';">flex-start</button>
+            <button class="btn" onclick="editElement.style.justifyContent='flexEnd';">flex-end</button>
+            <button class="btn" onclick="editElement.style.justifyContent='center';">center</button>
+            <button class="btn" onclick="editElement.style.justifyContent='spaceBetween';">space-between</button>
+            <button class="btn" onclick="editElement.style.justifyContent='spaceAround';">space-around</button>
+            <button class="btn" onclick="editElement.style.justifyContent='spaceEvenly';">space-evenly</button>
+            <button class="btn" onclick="editElement.style.justifyContent='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.justifyContent='inherit';">inherit</button>
+        </div>
+
+        <div class="left">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.left button')">&#xf0a9;</i>
+            </span>
+            <h4>left</h4>
+            <button class="btn" onclick="editElement.style.left='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.left='X';">length</button>
+            <button class="btn" onclick="editElement.style.left='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.left='inherit';">inherit</button>
+        </div>
+
+        <div class="letter-spacing">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.letter-spacing button')">&#xf0a9;</i>
+            </span>
+            <h4>letter-spacing</h4>
+            <button class="btn" onclick="editElement.style.letterSpacing='normal';">normal</button>
+            <button class="btn" onclick="editElement.style.letterSpacing='X';">length</button>
+            <button class="btn" onclick="editElement.style.letterSpacing='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.letterSpacing='inherit';">inherit</button>
+        </div>
+
+        <div class="line-height">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.line-height button')">&#xf0a9;</i>
+            </span>
+            <h4>line-height</h4>
+            <button class="btn" onclick="editElement.style.lineHeight='normal';">normal</button>
+            <button class="btn" onclick="editElement.style.lineHeight='X';">number</button>
+            <button class="btn" onclick="editElement.style.lineHeight='X';">length</button>
+            <button class="btn" onclick="editElement.style.lineHeight='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.lineHeight='inherit';">inherit</button>
+        </div>
+
+        <div class="list-style">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.list-style button')">&#xf0a9;</i>
+            </span>
+            <h4>list-style</h4>
+            <button class="btn" onclick="editElement.style.listStyle='X';">list-style-type list-style-position list-style-image</button>
+            <button class="btn" onclick="editElement.style.listStyle='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.listStyle='inherit';">inherit</button>
+        </div>
+
+        <div class="list-style-image">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.list-style-image button')">&#xf0a9;</i>
+            </span>
+            <h4>list-style-image</h4>
+            <button class="btn" onclick="editElement.style.listStyleImage='none';">none</button>
+            <button class="btn" onclick="editElement.style.listStyleImage='X';">url</button>
+            <button class="btn" onclick="editElement.style.listStyleImage='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.listStyleImage='inherit';">inherit</button>
+        </div>
+
+        <div class="list-style-position">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.list-style-position button')">&#xf0a9;</i>
+            </span>
+            <h4>list-style-position</h4>
+            <button class="btn" onclick="editElement.style.listStylePosition='inside';">inside</button>
+            <button class="btn" onclick="editElement.style.listStylePosition='outside';">outside</button>
+            <button class="btn" onclick="editElement.style.listStylePosition='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.listStylePosition='inherit';">inherit</button>
+        </div>
+
+        <div class="list-style-type">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.list-style-type button')">&#xf0a9;</i>
+            </span>
+            <!-- X -->
+            <h4>list-style-type</h4>
+            <button class="btn" onclick="editElement.style.listStyleType='circle';">circle</button>
+            <button class="btn" onclick="editElement.style.listStyleType='disc';">disc</button>
+            <button class="btn" onclick="editElement.style.listStyleType='square';">square</button>
+            <button class="btn" onclick="editElement.style.listStyleType='armenian';">armenian</button>
+            <button class="btn" onclick="editElement.style.listStyleType='cjkIdeographic';">cjk-ideographic</button>
+            <button class="btn" onclick="editElement.style.listStyleType='decimal';">decimal</button>
+            <button class="btn" onclick="editElement.style.listStyleType='decimalLeadingZero';">decimal-leading-zero</button>
+            <button class="btn" onclick="editElement.style.listStyleType='georgian';">georgian</button>
+            <button class="btn" onclick="editElement.style.listStyleType='hebrew';">hebrew</button>
+            <button class="btn" onclick="editElement.style.listStyleType='hiragana';">hiragana</button>
+            <button class="btn" onclick="editElement.style.listStyleType='hiraganaIroha';">hiragana-iroha</button>
+            <button class="btn" onclick="editElement.style.listStyleType='katakana';">katakana</button>
+            <button class="btn" onclick="editElement.style.listStyleType='katakana-iroha';">katakana-iroha</button>
+            <button class="btn" onclick="editElement.style.listStyleType='lowerAlpha';">lower-alpha</button>
+            <button class="btn" onclick="editElement.style.listStyleType='lowerGreek';">lower-greek</button>
+            <button class="btn" onclick="editElement.style.listStyleType='lowerLatin';">lower-latin</button>
+            <button class="btn" onclick="editElement.style.listStyleType='lowerRoman';">lower-roman</button>
+            <button class="btn" onclick="editElement.style.listStyleType='upperAlpha';">upper-alpha</button>
+            <button class="btn" onclick="editElement.style.listStyleType='upperGreek';">upper-greek</button>
+            <button class="btn" onclick="editElement.style.listStyleType='upperLatin';">upper-latin</button>
+            <button class="btn" onclick="editElement.style.listStyleType='upperRoman';">upper-roman</button>
+            <button class="btn" onclick="editElement.style.listStyleType='none';">none</button>
+            <button class="btn" onclick="editElement.style.listStyleType='inherit';">inherit</button>
+        </div>
+
+        <div class="margin">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.margin button')">&#xf0a9;</i>
+            </span>
+            <h4>margin</h4>
+            <button class="btn" onclick="editElement.style.margin='X';">length</button>
+            <button class="btn" onclick="editElement.style.margin='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.margin='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.margin='inherit';">inherit</button>
+        </div>
+
+        <div class="max-height">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.max-height button')">&#xf0a9;</i>
+            </span>
+            <h4>max-height</h4>
+            <button class="btn" onclick="editElement.style.maxHeight='none';">none</button>
+            <button class="btn" onclick="editElement.style.maxHeight='X';">length</button>
+            <button class="btn" onclick="editElement.style.maxHeight='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.maxHeight='inherit';">inherit</button>
+        </div>
+
+        <div class="max-width">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.max-width button')">&#xf0a9;</i>
+            </span>
+            <h4>max-width</h4>
+            <button class="btn" onclick="editElement.style.maxWidth='none';">none</button>
+            <button class="btn" onclick="editElement.style.maxWidth='X';">length</button>
+            <button class="btn" onclick="editElement.style.maxWidth='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.maxWidth='inherit';">inherit</button>
+        </div>
+
+        <div class="min-height">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.min-height button')">&#xf0a9;</i>
+            </span>
+            <h4>min-height</h4>
+            <button class="btn" onclick="editElement.style.minHeight='X';">length</button>
+            <button class="btn" onclick="editElement.style.minHeight='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.minHeight='inherit';">inherit</button>
+        </div>
+
+        <div class="min-width">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.min-width button')">&#xf0a9;</i>
+            </span>
+            <h4>min-width</h4>
+            <button class="btn" onclick="editElement.style.minWidth='X';">length</button>
+            <button class="btn" onclick="editElement.style.minWidth='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.minWidth='inherit';">inherit</button>
+        </div>
+
+        <div class="mix-blend-mode">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.mix-blend-mode button')">&#xf0a9;</i>
+            </span>
+            <h4>mix-blend-mode</h4>
+            <button class="btn" onclick="editElement.style.mixBlendMode='normal';">normal</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='multiply';">multiply</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='screen';">screen</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='overlay';">overlay</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='darken';">darken</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='lighten';">lighten</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='colorDodge';">color-dodge</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='colorBurn';">color-burn</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='difference';">difference</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='exclusion';">exclusion</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='hue';">hue</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='saturation';">saturation</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='color';">color</button>
+            <button class="btn" onclick="editElement.style.mixBlendMode='luminosity';">luminosity</button>
+        </div>
+
+        <div class="object-fit">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.object-fit button')">&#xf0a9;</i>
+            </span>
+            <h4>object-fit</h4>
+            <button class="btn" onclick="editElement.style.objectFit='fill';">fill</button>
+            <button class="btn" onclick="editElement.style.objectFit='contain';">contain</button>
+            <button class="btn" onclick="editElement.style.objectFit='cover';">cover</button>
+            <button class="btn" onclick="editElement.style.objectFit='scaleDown';">scale-down</button>
+            <button class="btn" onclick="editElement.style.objectFit='none';">none</button>
+            <button class="btn" onclick="editElement.style.objectFit='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.objectFit='inherit';">inherit</button>
+        </div>
+
+        <div class="object-position">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.object-position button')">&#xf0a9;</i>
+            </span>
+            <h4>object-position</h4>
+            <button class="btn">position</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="opacity">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.opacity button')">&#xf0a9;</i>
+            </span>
+            <h4>Opacity</h4>
+            <input type="range" oninput="opacity(this.value)">
+            <button class="btn">number</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="order">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.order button')">&#xf0a9;</i>
+            </span>
+            <h4>order</h4>
+            <button class="btn">number</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="outline">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.outline button')">&#xf0a9;</i>
+            </span>
+            <h4>outline</h4>
+            <button class="btn">outline-width outline-style outline-color</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="overflow">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.overflow button')">&#xf0a9;</i>
+            </span>
+            <h4>overflow</h4>
+            <button class="btn" onclick="editElement.style.overflow='visible';">visible</button>
+            <button class="btn" onclick="editElement.style.overflow='hidden';">hidden</button>
+            <button class="btn" onclick="editElement.style.overflow='scroll';">scroll</button>
+            <button class="btn" onclick="editElement.style.overflow='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.overflow='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.overflow='inherit';">inherit</button>
+        </div>
+
+        <div class="padding">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.padding button')">&#xf0a9;</i>
+            </span>
+            <h4>padding</h4>
+            <button class="btn" onclick="editElement.style.objectFit='X';">length</button>
+            <button class="btn" onclick="editElement.style.objectFit='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.objectFit='inherit';">inherit</button>
+        </div>
+
+        <div class="page-break-after">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.page-break-after button')">&#xf0a9;</i>
+            </span>
+            <h4>page-break-after</h4>
+            <button class="btn">auto</button>
+            <button class="btn">always</button>
+            <button class="btn">avoid</button>
+            <button class="btn">left</button>
+            <button class="btn">right</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="page-break-before">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.page-break-before button')">&#xf0a9;</i>
+            </span>
+            <h4>page-break-before</h4>
+            <button class="btn">auto</button>
+            <button class="btn">always</button>
+            <button class="btn">avoid</button>
+            <button class="btn">left</button>
+            <button class="btn">right</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="page-break-inside">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.page-break-inside button')">&#xf0a9;</i>
+            </span>
+            <h4>page-break-inside</h4>
+            <button class="btn">auto</button>
+            <button class="btn">avoid</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="perspective">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.perspective button')">&#xf0a9;</i>
+            </span>
+            <h4>perspective</h4>
+            <button class="btn">length</button>
+            <button class="btn">none</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="perspective-origin">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.perspective-origin button')">&#xf0a9;</i>
+            </span>
+            <h4>perspective-origin</h4>
+            <button class="btn">x-axis y-axis</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="pointer-events">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.pointer-events button')">&#xf0a9;</i>
+            </span>
+            <h4>pointer-events</h4>
+            <button class="btn">auto</button>
+            <button class="btn">none</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="position">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.position button')">&#xf0a9;</i>
+            </span>
+            <h4>position</h4>
+            <button class="btn" onclick="editElement.style.position='static';">static</button>
+            <button class="btn" onclick="editElement.style.position='absolute';">absolute</button>
+            <button class="btn" onclick="editElement.style.position='fixed';">fixed</button>
+            <button class="btn" onclick="editElement.style.position='relative';">relative</button>
+            <button class="btn" onclick="editElement.style.position='sticky';">sticky</button>
+            <button class="btn" onclick="editElement.style.position='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.position='inherit';">inherit</button>
+        </div>
+
+        <div class="quotes">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.quotes button')">&#xf0a9;</i>
+            </span>
+            <h4>quotes</h4>
+            <button class="btn">none</button>
+            <button class="btn">string</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="resize">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.resize button')">&#xf0a9;</i>
+            </span>
+            <h4>resize</h4>
+            <button class="btn">none</button>
+            <button class="btn">both</button>
+            <button class="btn">horizontal</button>
+            <button class="btn">vertical</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="right">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.right button')">&#xf0a9;</i>
+            </span>
+            <h4>right</h4>
+            <button class="btn" onclick="editElement.style.right='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.right='X';">length</button>
+            <button class="btn" onclick="editElement.style.right='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.right='inherit';">inherit</button>
+        </div>
+
+        <div class="row-gap">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.row-gap button')">&#xf0a9;</i>
+            </span>
+            <h4>row-gap</h4>
+            <button class="btn" onclick="editElement.style.rowGap='X';">length</button>
+            <button class="btn" onclick="editElement.style.rowGap='inherit';">normal</button>
+            <button class="btn" onclick="editElement.style.rowGap='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.rowGap='inherit';">inherit</button>
+        </div>
+
+        <div class="scroll-behavior">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.scroll-behavior button')">&#xf0a9;</i>
+            </span>
+            <h4>scroll-behavior</h4>
+            <button class="btn" onclick="editElement.style.scrollBehavior='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.scrollBehavior='smooth';">smooth</button>
+            <button class="btn" onclick="editElement.style.scrollBehavior='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.scrollBehavior='inherit';">inherit</button>
+        </div>
+
+        <div class="tab-side">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.tab-side button')">&#xf0a9;</i>
+            </span>
+            <h4>tab-side</h4>
+            <button class="btn">number</button>
+            <button class="btn">length</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="table-layout">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.table-layout button')">&#xf0a9;</i>
+            </span>
+            <h4>table-layout</h4>
+            <button class="btn">auto</button>
+            <button class="btn">fixed</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-align">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-align button')">&#xf0a9;</i>
+            </span>
+            <h4>text-align</h4>
+            <button class="btn" onclick="editElement.style.textAlign='inilefttial';">left</button>
+            <button class="btn" onclick="editElement.style.textAlign='right';">right</button>
+            <button class="btn" onclick="editElement.style.textAlign='center';">center</button>
+            <button class="btn" onclick="editElement.style.textAlign='justify';">justify</button>
+            <button class="btn" onclick="editElement.style.textAlign='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.textAlign='inherit';">inherit</button>
+        </div>
+
+        <div class="text-align-last">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-align-last button')">&#xf0a9;</i>
+            </span>
+            <h4>text-align-last</h4>
+            <button class="btn" onclick="editElement.style.textAlignLast='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.textAlignLast='inilefttial';">left</button>
+            <button class="btn" onclick="editElement.style.textAlignLast='right';">right</button>
+            <button class="btn" onclick="editElement.style.textAlignLast='center';">center</button>
+            <button class="btn" onclick="editElement.style.textAlignLast='justify';">justify</button>
+            <button class="btn" onclick="editElement.style.textAlignLast='start';">start</button>
+            <button class="btn" onclick="editElement.style.textAlignLast='end';">end</button>
+            <button class="btn" onclick="editElement.style.textAlignLast='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.textAlignLast='inherit';">inherit</button>
+        </div>
+
+        <div class="text-decoration">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-decoration button')">&#xf0a9;</i>
+            </span>
+            <h4>text-decoration</h4>
+            <button class="btn">text-decoration-line text-decoration-color text-decoration-style</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-decoration-color">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-decoration-color button')">&#xf0a9;</i>
+            </span>
+            <h4>text-decoration-color</h4>
+            <input type="color" oninput="color(this.value)">
+            <button class="btn">color</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-decoration-line">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-decoration-line button')">&#xf0a9;</i>
+            </span>
+            <h4>text-decoration-line</h4>
+            <button class="btn">none</button>
+            <button class="btn">underline</button>
+            <button class="btn">overline</button>
+            <button class="btn">line-through</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-decoration-style">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-decoration-style button')">&#xf0a9;</i>
+            </span>
+            <h4>text-decoration-style</h4>
+            <button class="btn">solid</button>
+            <button class="btn">double</button>
+            <button class="btn">dotted</button>
+            <button class="btn">dashed</button>
+            <button class="btn">wavy</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-indent">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-indent button')">&#xf0a9;</i>
+            </span>
+            <h4>text-indent</h4>
+            <button class="btn">length</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-justify">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-justify button')">&#xf0a9;</i>
+            </span>
+            <h4>text-justify</h4>
+            <button class="btn">auto</button>
+            <button class="btn">inter-word</button>
+            <button class="btn">inter-character</button>
+            <button class="btn">none</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-overflow">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-overflow button')">&#xf0a9;</i>
+            </span>
+            <h4>text-overflow</h4>
+            <button class="btn">clip</button>
+            <button class="btn">ellipsis</button>
+            <button class="btn">string</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-shadow">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-shadow button')">&#xf0a9;</i>
+            </span>
+            <h4>text-shadow</h4>
+            <button class="btn">h-shadow v-shadow blur-radius color</button>
+            <button class="btn">none</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="text-transform">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.text-transform button')">&#xf0a9;</i>
+            </span>
+            <h4>text-transform</h4>
+            <button class="btn">none</button>
+            <button class="btn">capitalize</button>
+            <button class="btn">uppercase</button>
+            <button class="btn">lowercase</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="top">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.top button')">&#xf0a9;</i>
+            </span>
+            <h4>top</h4>
+            <button class="btn" onclick="editElement.style.top='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.top='X';">length</button>
+            <button class="btn" onclick="editElement.style.top='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.top='inherit';">inherit</button>
+        </div>
+
+        <div class="transform">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.transform button')">&#xf0a9;</i>
+            </span>
+            <h4>transform</h4>
+            <button class="btn" onclick="editElement.style.transform='none';">none</button>
+            <button class="btn" onclick="editElement.style.transform='X';">transformFunctions</button>
+            <button class="btn" onclick="editElement.style.transform='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.transform='inherit';">inherit</button>
+        </div>
+
+        <div class="transform-origin">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.transform-origin button')">&#xf0a9;</i>
+            </span>
+            <h4>transform-origin</h4>
+            <button class="btn">x-axis y-axis z-axis</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="transform-style">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.transform-style button')">&#xf0a9;</i>
+            </span>
+            <h4>transform-style</h4>
+            <button class="btn">flat</button>
+            <button class="btn">preserve-3d</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="transition">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.transition button')">&#xf0a9;</i>
+            </span>
+            <h4>transition</h4>
+            <button class="btn">property duration timing-function delay</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="unicode-bidi">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.unicode-bidi button')">&#xf0a9;</i>
+            </span>
+            <h4>unicode-bidi</h4>
+            <button class="btn">normal</button>
+            <button class="btn">embed</button>
+            <button class="btn">bidi-override</button>
+            <button class="btn">isolate</button>
+            <button class="btn">isolate-override</button>
+            <button class="btn">plaintext</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="user-select">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.user-select button')">&#xf0a9;</i>
+            </span>
+            <h4>user-select</h4>
+            <button class="btn">auto</button>
+            <button class="btn">none</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="vertical-align">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.vertical-align button')">&#xf0a9;</i>
+            </span>
+            <h4>vertical-align</h4>
+            <button class="btn">baseline</button>
+            <button class="btn">length</button>
+            <button class="btn">sub</button>
+            <button class="btn">super</button>
+            <button class="btn">top</button>
+            <button class="btn">text-top</button>
+            <button class="btn">middle</button>
+            <button class="btn">bottom</button>
+            <button class="btn">text-bottom</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="visibility">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.visibility button')">&#xf0a9;</i>
+            </span>
+            <h4>visibility</h4>
+            <button class="btn">visible</button>
+            <button class="btn">hidden</button>
+            <button class="btn">collapse</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="white-space">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.white-space button')">&#xf0a9;</i>
+            </span>
+            <h4>white-space</h4>
+            <button class="btn">normal</button>
+            <button class="btn">nowrap</button>
+            <button class="btn">pre</button>
+            <button class="btn">pre-line</button>
+            <button class="btn">pre-wrap</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="width">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.width button')">&#xf0a9;</i>
+            </span>
+            <h4>width</h4>
+            <button class="btn" onclick="editElement.style.width='auto';">auto</button>
+            <button class="btn" onclick="editElement.style.width='X';">length</button>
+            <button class="btn" onclick="editElement.style.width='initial';">initial</button>
+            <button class="btn" onclick="editElement.style.width='inherit';">inherit</button>
+        </div>
+
+        <div class="word-break">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.word-break button')">&#xf0a9;</i>
+            </span>
+            <h4>word-break</h4>
+            <button class="btn">normal</button>
+            <button class="btn">break-all</button>
+            <button class="btn">keep-all</button>
+            <button class="btn">break-word</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="word-spacing">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.word-spacing button')">&#xf0a9;</i>
+            </span>
+            <h4>word-spacing</h4>
+            <button class="btn">normal</button>
+            <button class="btn">length</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="word-wrap">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.word-wrap button')">&#xf0a9;</i>
+            </span>
+            <h4>word-wrap</h4>
+            <button class="btn">normal</button>
+            <button class="btn">break-word</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="waiting-mode">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.waiting-mode button')">&#xf0a9;</i>
+            </span>
+            <h4>waiting-mode</h4>
+            <button class="btn">horizontal-tb</button>
+            <button class="btn">vertical-rl</button>
+            <button class="btn">vertical-lr</button>
+        </div>
+
+        <div class="z-index">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.z-index button')">&#xf0a9;</i>
+            </span>
+            <h4>z-index</h4>
+            <button class="btn">auto</button>
+            <button class="btn">number</button>
+            <button class="btn">initial</button>
+            <button class="btn">inherit</button>
+        </div>
+
+        <div class="background-color">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.background-color button')">&#xf0a9;</i>
+            </span>
+            <h4>Background Color</h4>
+            <input type="color" oninput="backgroundColor(this.value)">
+        </div>
+
+        <div class="bold">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.bold button')">&#xf0a9;</i>
+            </span>
+            <h4>Text bold</h4>
+            <input type="button" onclick="bold(this.value)" value="bold">
+        </div>
+
+        <div class="italic">
+            <span class="section-open-closer">
+                <i style='font-size:24px' class='fa' onclick="section_show_hide(this,'.italic button')">&#xf0a9;</i>
+            </span>
+            <h4>Text italic</h4>
+            <input type="button" onclick="italic(this.value)" value="italic">
+        </div>
+
+        </div>
+
+    </div>
+
+    <div id="popup"></div>
+
+<script>
+    
+var editElement = document.querySelector('h1');
+    var t = document.querySelector("h1").style;
+
+    function color(val) {
+        t.color = val;
+    }
+
+    function opacity(val) {
+        t.opacity = val + "%";
+    }
+
+    function backgroundColor(val) {
+        t.backgroundColor = val;
+    }
+
+    function bold(val) {
+        t.fontWeight = val;
+    }
+
+    function italic(val) {
+        t.fontStyle = val;
+    }
+
+    function cursor(val) {
+        t.cursor = val.innerHTML;
+    }
+    
+    function stylebot_div_div_display(display) {
+        let len = document.querySelectorAll("#stylebot div div").length;
+        for (let i = 0; i < len; i++) {
+            document.querySelectorAll("#stylebot div div")[i].style.display=display;
+        }
+    }
+
+    function section_show_hide(me,location){
+        for(var i=0;i<100;i++){
+            var x = document.querySelectorAll("#stylebot div"+location)[i];
+            if(x.style.display == "none"){
+                x.style.display="block";
+                me.innerHTML="&#xf0a8;";
+                let y = me.parentElement.parentElement.className;
+                stylebot_div_div_display("none");
+                document.querySelector("."+y).style.display="block";
+            }
+            else{
+                x.style.display="none";
+                me.innerHTML="&#xf0a9;";
+                stylebot_div_div_display("block");
+            }
+        }
+    }
+    
+    // function section_show_hide(me,location){
+    //     document.querySelector("#stylebot div").innerHTML="";    
+    // }
+</script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
